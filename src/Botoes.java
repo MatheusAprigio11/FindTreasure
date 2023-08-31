@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.File;
 
 public class Botoes extends JButton {
@@ -6,7 +8,6 @@ public class Botoes extends JButton {
         setOpaque(true);
         setContentAreaFilled(false);
         setBorder(null);
-
     }
 
     public void mudarBotaoImg(String anything) {
@@ -15,9 +16,5 @@ public class Botoes extends JButton {
         Icon icone = new ImageIcon(url);
 
         this.setIcon(icone);
-    }
-
-    public void setTesouro(boolean tesouro){
-        tesouro = false;
     }
 }
