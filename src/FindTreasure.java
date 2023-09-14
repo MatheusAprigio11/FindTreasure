@@ -1,21 +1,17 @@
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import java.awt.image.BufferedImage;
-
 import java.util.ArrayList;
 import java.util.Random;
 
-public class ExemploBotoesSwing extends JFrame implements ActionListener {
+public class FindTreasure extends JFrame implements ActionListener {
     Botoes sorteado;
     int chances = 3;
-    private BufferedImage imagemDeFundo;
     ArrayList<Botoes> btns = new ArrayList<>();
 
-    public ExemploBotoesSwing() {
+    public FindTreasure() {
         super();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
@@ -41,7 +37,7 @@ public class ExemploBotoesSwing extends JFrame implements ActionListener {
         this.setSize(800, 600);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
-
+        this.setResizable(false);
     }
 
     public void sortear() {
@@ -65,11 +61,11 @@ public class ExemploBotoesSwing extends JFrame implements ActionListener {
             }
             if (botaoClicado == sorteado) {
                 sorteado.mudarBotaoImg("acertou.png");
-                JOptionPane.showMessageDialog(null, "Você encontrou o tesouro sorteado!");
+                JOptionPane.showMessageDialog(null, "VOCE ENCONTROU O TESOURO!!");
                 this.setVisible(false);
                 System.exit(0);
             } else {
-                botaoClicado.setEnabled(false);
+                botaoClicado.setEnabled(true);
                 botaoClicado.mudarBotaoImg("vazio-aberto.png");
             }
         }
